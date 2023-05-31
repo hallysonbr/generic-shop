@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericShop.Services.Orders
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericShop.Services.Orders.Api", "GenericShop.Services.Orders.Api\GenericShop.Services.Orders.Api.csproj", "{E40BBFD2-54E8-4A8B-A08C-A87B5DEE2A4E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{F4B76A38-2133-45E4-A493-00F7A5202E7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Orders.Infra", "GenericShop.Services.Orders.Infra\GenericShop.Services.Orders.Infra.csproj", "{F3C841DE-B2ED-48F5-A2AD-578F792481E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,10 @@ Global
 		{E40BBFD2-54E8-4A8B-A08C-A87B5DEE2A4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E40BBFD2-54E8-4A8B-A08C-A87B5DEE2A4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E40BBFD2-54E8-4A8B-A08C-A87B5DEE2A4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C841DE-B2ED-48F5-A2AD-578F792481E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C841DE-B2ED-48F5-A2AD-578F792481E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C841DE-B2ED-48F5-A2AD-578F792481E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C841DE-B2ED-48F5-A2AD-578F792481E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +49,7 @@ Global
 		{DC7116C8-8A1E-44A7-A487-4BBD44F6E073} = {AE1AB2D8-4C1A-4D32-AF0B-4218D4CAF919}
 		{EDB1BC31-2011-432F-94F4-68EEA40736E3} = {47B77DF9-2BC2-462D-90A4-65626234EC13}
 		{E40BBFD2-54E8-4A8B-A08C-A87B5DEE2A4E} = {4B784A01-3201-4FA5-BEAC-5ABE84D788BF}
+		{F3C841DE-B2ED-48F5-A2AD-578F792481E9} = {F4B76A38-2133-45E4-A493-00F7A5202E7A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2048A678-8829-4A65-843D-69A31DA25B39}

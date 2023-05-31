@@ -21,6 +21,7 @@ namespace GenericShop.Services.Orders.Domain.Entities
             PaymentInfo = paymentInfo;
             Items = items;
             CreatedAt = DateTime.Now;
+            Status = OrderStatusEnum.Started;
 
             AddEvent(new OrderCreated(Id, TotalPrice, paymentInfo, Customer.FullName, Customer.Email));
         }
