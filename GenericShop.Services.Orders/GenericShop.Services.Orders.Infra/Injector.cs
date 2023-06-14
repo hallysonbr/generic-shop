@@ -1,10 +1,13 @@
 ﻿using GenericShop.Services.Orders.Domain.Interfaces.Repositories;
+using GenericShop.Services.Orders.Infra.MessageBus;
 using GenericShop.Services.Orders.Infra.MongoDB;
 using GenericShop.Services.Orders.Infra.Repositories;
+using GenericShop.Services.Orders.Infra.Subscribers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using RabbitMQ.Client;
 
 namespace GenericShop.Services.Orders.Infra
 {
@@ -41,6 +44,24 @@ namespace GenericShop.Services.Orders.Infra
         public static void AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IOrderRepository, OrderRepository>();
+        }
+
+        public static void AddMessageBus(this IServiceCollection services) 
+        {
+            var connectionFactory = new ConnectionFactory
+            {
+                HostName = "localhost"
+            };
+
+            var connection = connectionFactory.CreateConnection("order-service-producer");
+
+            services.AddSingleton(new ProducerConnection(connection));
+            services.AddSingleton<IMessageBusClient, RabbitMqClient>();
+        }
+
+        public static void AddSubscribers(this IServiceCollection services)
+        {
+            services.AddHostedService<PaymentAcceptedSubscriber>();
         }
     }
 }

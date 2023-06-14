@@ -7,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationServices();
 builder.Services.AddMongo();
 builder.Services.AddRepositories();
+builder.Services.AddMessageBus();
+builder.Services.AddSubscribers();
+
+builder.Services.AddHttpClient();
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

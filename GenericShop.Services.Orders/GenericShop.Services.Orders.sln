@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericShop.Services.Orders
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{F4B76A38-2133-45E4-A493-00F7A5202E7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Orders.Infra", "GenericShop.Services.Orders.Infra\GenericShop.Services.Orders.Infra.csproj", "{F3C841DE-B2ED-48F5-A2AD-578F792481E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericShop.Services.Orders.Infra", "GenericShop.Services.Orders.Infra\GenericShop.Services.Orders.Infra.csproj", "{F3C841DE-B2ED-48F5-A2AD-578F792481E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
