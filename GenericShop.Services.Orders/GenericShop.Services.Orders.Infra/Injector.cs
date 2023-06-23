@@ -3,6 +3,7 @@ using GenericShop.Services.Orders.Domain.Interfaces.Repositories;
 using GenericShop.Services.Orders.Infra.MessageBus;
 using GenericShop.Services.Orders.Infra.MongoDB;
 using GenericShop.Services.Orders.Infra.Repositories;
+using GenericShop.Services.Orders.Infra.ServiceDiscovery;
 using GenericShop.Services.Orders.Infra.Subscribers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -74,6 +75,8 @@ namespace GenericShop.Services.Orders.Infra
                 var address = configuration.GetValue<string>("Consul:Host");
                 consulConfig.Address = new Uri(address);
             }));
+
+            services.AddTransient<IServiceDiscoveryService, ConsulService>();
         }
 
         public static IApplicationBuilder UseConsul(this IApplicationBuilder app)
