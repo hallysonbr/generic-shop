@@ -1,9 +1,13 @@
 ﻿using Consul;
 using GenericShop.Services.Orders.Domain.Interfaces.Repositories;
+using GenericShop.Services.Orders.Infra.CacheStorage;
+using GenericShop.Services.Orders.Infra.CacheStorage.Interfaces;
 using GenericShop.Services.Orders.Infra.MessageBus;
+using GenericShop.Services.Orders.Infra.MessageBus.Interfaces;
 using GenericShop.Services.Orders.Infra.MongoDB;
 using GenericShop.Services.Orders.Infra.Repositories;
 using GenericShop.Services.Orders.Infra.ServiceDiscovery;
+using GenericShop.Services.Orders.Infra.ServiceDiscovery.Interfaces;
 using GenericShop.Services.Orders.Infra.Subscribers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
@@ -104,6 +108,17 @@ namespace GenericShop.Services.Orders.Infra
             });
 
             return app;
+        }
+
+        public static void AddRedisCache(this IServiceCollection services)
+        {
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.InstanceName = "OrdersCache";
+                options.Configuration = "localhost:6379";
+            });
+
+            services.AddTransient<ICacheService, CacheService>();
         }
     }
 }

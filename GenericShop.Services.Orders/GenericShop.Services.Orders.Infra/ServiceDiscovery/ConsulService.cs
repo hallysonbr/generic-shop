@@ -1,4 +1,5 @@
 ﻿using Consul;
+using GenericShop.Services.Orders.Infra.ServiceDiscovery.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

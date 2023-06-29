@@ -1,8 +1,8 @@
 ﻿using GenericShop.Services.Orders.Application.DTOs.IntegrationDtos;
 using GenericShop.Services.Orders.Domain.Extensions;
 using GenericShop.Services.Orders.Domain.Interfaces.Repositories;
-using GenericShop.Services.Orders.Infra.MessageBus;
-using GenericShop.Services.Orders.Infra.ServiceDiscovery;
+using GenericShop.Services.Orders.Infra.MessageBus.Interfaces;
+using GenericShop.Services.Orders.Infra.ServiceDiscovery.Interfaces;
 using MediatR;
 using Newtonsoft.Json;
 

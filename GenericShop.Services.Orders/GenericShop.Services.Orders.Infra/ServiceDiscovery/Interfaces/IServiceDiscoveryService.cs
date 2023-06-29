@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GenericShop.Services.Orders.Infra.ServiceDiscovery
+namespace GenericShop.Services.Orders.Infra.ServiceDiscovery.Interfaces
 {
     public interface IServiceDiscoveryService
     {

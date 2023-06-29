@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GenericShop.Services.Orders.Infra.MessageBus.Interfaces;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using RabbitMQ.Client;
 using System;

@@ -10,6 +10,7 @@ builder.Services.AddRepositories();
 builder.Services.AddMessageBus();
 builder.Services.AddSubscribers();
 builder.Services.AddConsulConfig(builder.Configuration);
+builder.Services.AddRedisCache();
 
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
