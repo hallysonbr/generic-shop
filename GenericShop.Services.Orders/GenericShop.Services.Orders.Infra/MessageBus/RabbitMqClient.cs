@@ -31,6 +31,7 @@ namespace GenericShop.Services.Orders.Infra.MessageBus
             
             var payload = JsonConvert.SerializeObject(message, settings);
             var body = Encoding.UTF8.GetBytes(payload);
+            Console.WriteLine(payload);
 
             channel.ExchangeDeclare(exchange, "topic", true);
             channel.BasicPublish(exchange, routingKey, null, body);
