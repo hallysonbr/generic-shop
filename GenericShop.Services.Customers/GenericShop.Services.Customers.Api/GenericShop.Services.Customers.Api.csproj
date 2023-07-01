@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GenericShop.Services.Customers.Application\GenericShop.Services.Customers.Application.csproj" />
+    <ProjectReference Include="..\GenericShop.Services.Customers.Infra\GenericShop.Services.Customers.Infra.csproj" />
   </ItemGroup>
 
 </Project>

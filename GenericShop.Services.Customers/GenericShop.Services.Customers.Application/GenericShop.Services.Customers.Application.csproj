@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GenericShop.Services.Customers.Domain\GenericShop.Services.Customers.Domain.csproj" />
+    <ProjectReference Include="..\GenericShop.Services.Customers.Infra\GenericShop.Services.Customers.Infra.csproj" />
   </ItemGroup>
 
 </Project>

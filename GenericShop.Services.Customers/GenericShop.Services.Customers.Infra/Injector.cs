@@ -1,0 +1,126 @@
+﻿using GenericShop.Services.Customers.Domain.Entities;
+using GenericShop.Services.Customers.Domain.Interfaces.Entities;
+using GenericShop.Services.Customers.Domain.Interfaces.Repositories;
+using GenericShop.Services.Customers.Infra.MessageBus.Interfaces;
+using GenericShop.Services.Customers.Infra.MessageBus;
+using GenericShop.Services.Customers.Infra.MongoDB;
+using GenericShop.Services.Customers.Infra.MongoDB.Interfaces;
+using GenericShop.Services.Customers.Infra.Repositories;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using MongoDB.Bson;
+using MongoDB.Driver;
+using RabbitMQ.Client;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using GenericShop.Services.Customers.Infra.Subscribers;
+using Consul;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+
+namespace GenericShop.Services.Customers.Infra
+{
+    public static class Injector
+    {
+        public static void AddMongo(this IServiceCollection services)
+        {
+            services.AddSingleton(sp => {
+                var configuration = sp.GetService<IConfiguration>();
+                var options = new MongoDBOptions();
+
+                configuration.GetSection("Mongo").Bind(options);
+
+                return options;
+            });
+
+            services.AddSingleton<IMongoClient>(sp => {
+                var options = sp.GetService<MongoDBOptions>();
+                return new MongoClient(options.ConnectionString);
+            });
+
+            services.AddTransient(sp => {
+                BsonDefaults.GuidRepresentation = GuidRepresentation.Standard;
+
+                var options = sp.GetService<MongoDBOptions>();
+                var mongoClient = sp.GetService<IMongoClient>();
+
+                return mongoClient.GetDatabase(options.Database);
+            });          
+        }
+
+        public static void AddRepositories(this IServiceCollection services)
+        {
+            services.AddMongoRepository<Customer>("customers");
+            services.AddScoped<ICustomerRepository, CustomerRepository>();      
+        }
+
+        private static void AddMongoRepository<T>(this IServiceCollection services, string collection) where T : IEntityBase
+        {
+            services.AddScoped<IMongoRepository<T>>(f =>
+            {
+                var mongoDatabase = f.GetRequiredService<IMongoDatabase>();
+
+                return new MongoRepository<T>(mongoDatabase, collection);
+            });         
+        }
+
+        public static void AddMessageBus(this IServiceCollection services)
+        {
+            var connectionFactory = new ConnectionFactory
+            {
+                HostName = "localhost"
+            };
+
+            var connection = connectionFactory.CreateConnection("customers-service-producer");
+
+            services.AddSingleton(new ProducerConnection(connection));
+            services.AddSingleton<IMessageBusClient, RabbitMqClient>();
+            services.AddTransient<IEventProcessor, EventProcessor>();
+        }
+
+        public static void AddSubscribers(this IServiceCollection services)
+        {
+            services.AddHostedService<CustomerCreatedSubscriber>();           
+        }
+
+        public static void AddConsulConfig(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddSingleton<IConsulClient, ConsulClient>(p => new ConsulClient(consulConfig =>
+            {
+                var address = configuration.GetValue<string>("Consul:Host");
+                consulConfig.Address = new Uri(address);
+            }));            
+        }
+
+        public static IApplicationBuilder UseConsul(this IApplicationBuilder app)
+        {
+            var consulClient = app.ApplicationServices.GetRequiredService<IConsulClient>();
+            var logger = app.ApplicationServices.GetRequiredService<ILoggerFactory>().CreateLogger("Extensions");
+            var lifetime = app.ApplicationServices.GetRequiredService<IHostApplicationLifetime>();
+
+            var registration = new AgentServiceRegistration()
+            {
+                ID = $"customer-service-{Guid.NewGuid()}",
+                Name = "CustomerServices",
+                Address = "localhost",
+                Port = 5001
+            };
+
+            logger.LogInformation("Registering with Consul");
+            consulClient.Agent.ServiceDeregister(registration.ID).ConfigureAwait(true);
+            consulClient.Agent.ServiceRegister(registration).ConfigureAwait(true);
+
+            lifetime.ApplicationStopping.Register(() =>
+            {
+                logger.LogInformation("Unregistering from Consul");
+                consulClient.Agent.ServiceDeregister(registration.ID).ConfigureAwait(true);
+            });
+
+            return app;
+        }
+    }
+}

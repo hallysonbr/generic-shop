@@ -1,9 +1,15 @@
 using GenericShop.Services.Customers.Application;
+using GenericShop.Services.Customers.Infra;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddApplicationServices();
+builder.Services.AddMongo();
+builder.Services.AddRepositories();
+builder.Services.AddMessageBus();
+builder.Services.AddSubscribers();
+builder.Services.AddConsulConfig(builder.Configuration);
 
 builder.Services.AddHttpClient();
 builder.Services.AddControllers();
@@ -26,6 +32,8 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseConsul();
 
 app.MapControllers();
 

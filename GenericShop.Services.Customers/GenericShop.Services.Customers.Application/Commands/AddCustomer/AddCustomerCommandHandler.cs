@@ -1,5 +1,6 @@
 ﻿using GenericShop.Services.Customers.Domain.Entities;
 using GenericShop.Services.Customers.Domain.Interfaces.Repositories;
+using GenericShop.Services.Customers.Infra.MessageBus.Interfaces;
 using MediatR;
 using System;
 using System.Collections.Generic;
