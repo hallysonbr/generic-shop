@@ -10,7 +10,7 @@ namespace GenericShop.Services.Products.Application
 {
     public static class Injector
     {
-        public static void AddHandlers(this IServiceCollection services)
+        public static void AddApplicationServices(this IServiceCollection services)
         {
             services.AddMediatR(c => c.RegisterServicesFromAssemblyContaining(typeof(GetAllProductsCommand)));
         }
