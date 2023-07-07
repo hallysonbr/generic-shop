@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 -Presentation", "1 -Presentation", "{70DC0917-15A3-4862-A5EF-D8CDA2A1DF0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{13D40066-7C70-46E4-B001-FF060D919C22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{C4D6BCCC-A42A-4CB4-BB22-93C180D4664B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{8EEB7B08-6590-4B53-92EB-59DFCBCB3656}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Payments.Api", "GenericShop.Services.Payments.Api\GenericShop.Services.Payments.Api.csproj", "{4F7E87BA-ACDF-4B28-AD32-CDA43263EBFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Payments.Application", "GenericShop.Services.Payments.Application\GenericShop.Services.Payments.Application.csproj", "{D41C998D-037E-4678-A381-7C0245F42EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Payments.Domain", "GenericShop.Services.Payments.Domain\GenericShop.Services.Payments.Domain.csproj", "{23AB0549-DBBA-478D-9133-2C4D6F8C7936}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Payments.Infra", "GenericShop.Services.Payments.Infra\GenericShop.Services.Payments.Infra.csproj", "{EA615417-B5B1-4981-990B-D997E8DEE6E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F7E87BA-ACDF-4B28-AD32-CDA43263EBFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7E87BA-ACDF-4B28-AD32-CDA43263EBFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7E87BA-ACDF-4B28-AD32-CDA43263EBFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7E87BA-ACDF-4B28-AD32-CDA43263EBFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D41C998D-037E-4678-A381-7C0245F42EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D41C998D-037E-4678-A381-7C0245F42EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D41C998D-037E-4678-A381-7C0245F42EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D41C998D-037E-4678-A381-7C0245F42EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23AB0549-DBBA-478D-9133-2C4D6F8C7936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23AB0549-DBBA-478D-9133-2C4D6F8C7936}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23AB0549-DBBA-478D-9133-2C4D6F8C7936}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23AB0549-DBBA-478D-9133-2C4D6F8C7936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA615417-B5B1-4981-990B-D997E8DEE6E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA615417-B5B1-4981-990B-D997E8DEE6E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA615417-B5B1-4981-990B-D997E8DEE6E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA615417-B5B1-4981-990B-D997E8DEE6E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F7E87BA-ACDF-4B28-AD32-CDA43263EBFC} = {70DC0917-15A3-4862-A5EF-D8CDA2A1DF0E}
+		{D41C998D-037E-4678-A381-7C0245F42EE7} = {13D40066-7C70-46E4-B001-FF060D919C22}
+		{23AB0549-DBBA-478D-9133-2C4D6F8C7936} = {C4D6BCCC-A42A-4CB4-BB22-93C180D4664B}
+		{EA615417-B5B1-4981-990B-D997E8DEE6E0} = {8EEB7B08-6590-4B53-92EB-59DFCBCB3656}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37622ECB-9646-4F45-AD05-9CD6EC4FE4A7}
+	EndGlobalSection
+EndGlobal
