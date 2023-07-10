@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentation", "1 - Presentation", "{4363C57E-72FC-452C-841A-CC10603B56B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{EAD72B50-C00D-4207-881B-FF0F2A6364D2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{B9DD2C42-4E07-4E36-80F5-AED6D386908D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{6C04A598-0BFD-47F5-998B-92D83E679977}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Notifications.Api", "GenericShop.Services.Notifications.Api\GenericShop.Services.Notifications.Api.csproj", "{B3D73BC2-9490-464B-81AB-FFCD44794C5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Notifications.Application", "GenericShop.Services.Notifications.Application\GenericShop.Services.Notifications.Application.csproj", "{B168043C-8AD5-4466-80B2-F11D5DA05C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Notifications.Domain", "GenericShop.Services.Notifications.Domain\GenericShop.Services.Notifications.Domain.csproj", "{A2BBF12D-A5CE-411A-B7EC-6B89A211831E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericShop.Services.Notifications.Infra", "GenericShop.Services.Notifications.Infra\GenericShop.Services.Notifications.Infra.csproj", "{98C9CC86-990F-48F2-9AF0-04046D36F464}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3D73BC2-9490-464B-81AB-FFCD44794C5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3D73BC2-9490-464B-81AB-FFCD44794C5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3D73BC2-9490-464B-81AB-FFCD44794C5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3D73BC2-9490-464B-81AB-FFCD44794C5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B168043C-8AD5-4466-80B2-F11D5DA05C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B168043C-8AD5-4466-80B2-F11D5DA05C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B168043C-8AD5-4466-80B2-F11D5DA05C48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B168043C-8AD5-4466-80B2-F11D5DA05C48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2BBF12D-A5CE-411A-B7EC-6B89A211831E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2BBF12D-A5CE-411A-B7EC-6B89A211831E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2BBF12D-A5CE-411A-B7EC-6B89A211831E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2BBF12D-A5CE-411A-B7EC-6B89A211831E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98C9CC86-990F-48F2-9AF0-04046D36F464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98C9CC86-990F-48F2-9AF0-04046D36F464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98C9CC86-990F-48F2-9AF0-04046D36F464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98C9CC86-990F-48F2-9AF0-04046D36F464}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3D73BC2-9490-464B-81AB-FFCD44794C5B} = {4363C57E-72FC-452C-841A-CC10603B56B1}
+		{B168043C-8AD5-4466-80B2-F11D5DA05C48} = {EAD72B50-C00D-4207-881B-FF0F2A6364D2}
+		{A2BBF12D-A5CE-411A-B7EC-6B89A211831E} = {B9DD2C42-4E07-4E36-80F5-AED6D386908D}
+		{98C9CC86-990F-48F2-9AF0-04046D36F464} = {6C04A598-0BFD-47F5-998B-92D83E679977}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF354FDD-DFB3-4564-B1DB-933551E68FC9}
+	EndGlobalSection
+EndGlobal
