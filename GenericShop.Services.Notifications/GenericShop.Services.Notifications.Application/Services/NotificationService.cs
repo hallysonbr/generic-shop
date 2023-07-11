@@ -40,7 +40,8 @@ namespace GenericShop.Services.Notifications.Application.Services
             message.SetGoogleAnalytics(false);
             message.SetSubscriptionTracking(false);
 
-            await _sendGridClient.SendEmailAsync(message);
+            //await _sendGridClient.SendEmailAsync(message);
+            await Task.CompletedTask;
         }
     }
 }
