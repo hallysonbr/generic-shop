@@ -1,6 +1,13 @@
+using GenericShop.Services.Notifications.Application;
+using GenericShop.Services.Notifications.Infra;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddMailService(builder.Configuration);
+builder.Services.AddRepositories();
+builder.Services.AddMongo();
+builder.Services.AddSubscribers();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
