@@ -72,10 +72,10 @@ namespace GenericShop.Services.Notifications.Infra.Subscribers
 
                 var template = await mailRepository.GetTemplate("PaymentAccepted");
 
-                var subject = template.Subject;
-                var content = string.Format(template.Content, payment.Id);
+                //var subject = template.Subject;
+                //var content = string.Format(template.Content, payment.Id);
 
-                await emailService.SendAsync(subject, content, payment.Email, payment.FullName);
+                //await emailService.SendAsync(subject, content, payment.Email, payment.FullName);
 
                 return true;
             }

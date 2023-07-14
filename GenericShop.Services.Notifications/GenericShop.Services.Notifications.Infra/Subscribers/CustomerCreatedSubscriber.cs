@@ -71,10 +71,10 @@ namespace GenericShop.Services.Notifications.Infra.Subscribers
 
                 var template = await mailRepository.GetTemplate("CustomerCreated");
 
-                var subject = string.Format(template.Subject, customer.FullName);
-                var content = string.Format(template.Content, customer.FullName);
+                //var subject = string.Format(template.Subject, customer.FullName);
+                //var content = string.Format(template.Content, customer.FullName);
 
-                await emailService.SendAsync(subject, content, customer.Email, customer.FullName);
+                //await emailService.SendAsync(subject, content, customer.Email, customer.FullName);
 
                 return true;
             }

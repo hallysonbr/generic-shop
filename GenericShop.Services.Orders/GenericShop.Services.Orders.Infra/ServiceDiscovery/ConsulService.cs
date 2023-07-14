@@ -28,7 +28,7 @@ namespace GenericShop.Services.Orders.Infra.ServiceDiscovery
 
             Console.WriteLine(service.Address);
 
-            var uri = $"http://{service.Address}:{service.Port}{requestUrl}";
+            var uri = $"https://{service.Address}:{service.Port}{requestUrl}";
 
             return new Uri(uri);
         }
