@@ -2,11 +2,6 @@
 using GenericShop.Services.Customers.Domain.Interfaces.Repositories;
 using GenericShop.Services.Customers.Infra.MessageBus.Interfaces;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Customers.Application.Commands.AddCustomer
 {

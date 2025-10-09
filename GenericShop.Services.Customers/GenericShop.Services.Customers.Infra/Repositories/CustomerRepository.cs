@@ -1,11 +1,6 @@
 ﻿using GenericShop.Services.Customers.Domain.Entities;
 using GenericShop.Services.Customers.Domain.Interfaces.Repositories;
 using GenericShop.Services.Customers.Infra.MongoDB.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Customers.Infra.Repositories
 {

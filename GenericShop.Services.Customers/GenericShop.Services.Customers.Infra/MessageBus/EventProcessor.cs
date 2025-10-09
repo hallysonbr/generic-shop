@@ -2,11 +2,7 @@
 using GenericShop.Services.Customers.Domain.Interfaces.Events;
 using GenericShop.Services.Customers.Infra.MessageBus.IntegrationEvents;
 using GenericShop.Services.Customers.Infra.MessageBus.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Customers.Infra.MessageBus
 {

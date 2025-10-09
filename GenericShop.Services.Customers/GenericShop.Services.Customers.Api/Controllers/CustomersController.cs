@@ -2,7 +2,6 @@
 using GenericShop.Services.Customers.Application.Commands.UpdateCustomer;
 using GenericShop.Services.Customers.Application.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericShop.Services.Customers.Api.Controllers
