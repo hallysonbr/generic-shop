@@ -2,11 +2,6 @@
 using GenericShop.Services.Products.Domain.Entities;
 using GenericShop.Services.Products.Domain.ValueObjects;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Products.Application.Commands.AddProduct
 {

@@ -1,11 +1,6 @@
 ﻿using GenericShop.Services.Products.Application.DTOs.ViewModels;
 using GenericShop.Services.Products.Domain.Interfaces.Repositories;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Products.Application.Queries.GetAllProducts
 {

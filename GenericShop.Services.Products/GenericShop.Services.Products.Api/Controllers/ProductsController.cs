@@ -3,7 +3,6 @@ using GenericShop.Services.Products.Application.Commands.UpdateProduct;
 using GenericShop.Services.Products.Application.Queries.GetAllProducts;
 using GenericShop.Services.Products.Application.Queries.GetProductById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GenericShop.Services.Products.Api.Controllers
