@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericShop.Services.Payments.Domain.Entities
+﻿namespace GenericShop.Services.Payments.Domain.Entities
 {
     public class Invoice
     {

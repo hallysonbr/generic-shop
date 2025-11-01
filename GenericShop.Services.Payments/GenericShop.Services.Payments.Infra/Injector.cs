@@ -2,11 +2,6 @@
 using GenericShop.Services.Payments.Infra.PaymentGateway;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using GenericShop.Services.Payments.Infra.Subscribers;
 using GenericShop.Services.Payments.Infra.MongoDB;
 using MongoDB.Bson;

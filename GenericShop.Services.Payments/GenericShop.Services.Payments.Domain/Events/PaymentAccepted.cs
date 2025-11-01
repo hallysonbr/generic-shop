@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericShop.Services.Payments.Domain.Events
+﻿namespace GenericShop.Services.Payments.Domain.Events
 {
     public class PaymentAccepted
     {
