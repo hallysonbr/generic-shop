@@ -1,10 +1,5 @@
 ﻿using GenericShop.Services.Orders.Domain.Interfaces.Entities;
 using GenericShop.Services.Orders.Domain.Interfaces.Events;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Orders.Domain.Entities
 {

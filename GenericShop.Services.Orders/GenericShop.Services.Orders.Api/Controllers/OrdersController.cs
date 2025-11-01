@@ -1,9 +1,7 @@
 ﻿using GenericShop.Services.Orders.Application.Commands.AddOrder;
 using GenericShop.Services.Orders.Application.Queries.GetOrderById;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 
 namespace GenericShop.Services.Orders.Api.Controllers
 {

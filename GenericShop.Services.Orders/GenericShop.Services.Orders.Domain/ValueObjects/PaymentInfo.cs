@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GenericShop.Services.Orders.Domain.ValueObjects
+﻿namespace GenericShop.Services.Orders.Domain.ValueObjects
 {
     public class PaymentInfo
     {

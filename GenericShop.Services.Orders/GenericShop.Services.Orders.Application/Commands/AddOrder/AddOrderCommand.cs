@@ -2,11 +2,6 @@
 using GenericShop.Services.Orders.Domain.Entities;
 using GenericShop.Services.Orders.Domain.ValueObjects;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Orders.Application.Commands.AddOrder
 {
