@@ -13,7 +13,7 @@ namespace GenericShop.Services.Customers.Infra.Subscribers
         private readonly IServiceProvider _serviceProvider;
         private readonly IConnection _connection;
         private readonly IModel _channel;
-        private const string QueueName = "customers-service/customers.CustomerCreatedIntegration";
+        private const string QueueName = "customers-service/customer-created-queue";
 
         public CustomerCreatedSubscriber(IServiceProvider serviceProvider, ProducerConnection producerConnection)
         {
@@ -22,6 +22,7 @@ namespace GenericShop.Services.Customers.Infra.Subscribers
 
             _channel = _connection.CreateModel();
             _channel.QueueDeclare(QueueName, false, false, false, null);
+            _channel.QueueBind(QueueName, "customer-service", "customer-created", null);
         }
 
         protected override Task ExecuteAsync(CancellationToken stoppingToken)
