@@ -72,6 +72,8 @@ namespace GenericShop.Services.Orders.Infra.Subscribers
 
                 await orderRepository.UpdateAsync(order);
 
+                Console.WriteLine($"Order {order.Id} was updated successfully! New status: {order.Status}.");
+
                 return true;
             }
         }
