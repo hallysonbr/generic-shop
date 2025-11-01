@@ -72,6 +72,8 @@ namespace GenericShop.Services.Notifications.Infra.Subscribers
 
                 //await emailService.SendAsync(subject, content, customer.Email, customer.FullName);
 
+                Console.WriteLine($"Email sent to {customer.Email} Successfully!");
+
                 return true;
             }
         }
