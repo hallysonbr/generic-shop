@@ -1,11 +1,6 @@
 ﻿using GenericShop.Services.Notifications.Domain.DTOs;
 using GenericShop.Services.Notifications.Domain.Interfaces.Repositories;
 using MongoDB.Driver;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GenericShop.Services.Notifications.Infra.Repositories
 {
